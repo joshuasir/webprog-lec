@@ -47,7 +47,7 @@
        
     
     
-    <section class="about">
+    <section class="about" style="padding-bottom: 50px">
         <h3>ABOUT</h3>
         <h5>We serve good food, quality food, the best of food</h5>
     </section>

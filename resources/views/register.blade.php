@@ -7,21 +7,21 @@
 @section('content')
 <form action="/register" method="post">
     @csrf
-    <h1>Register</h1>
-    <div class="form-group">
-        <label for="fullname">Full name</label>
+    <h1 style="margin-top: 15px">Register</h1>
+    <div class="form-group" style="margin-top: 25px">
+        <label for="fullname" style="margin-bottom: 5px">Full name</label>
         <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter fullname">
       </div>
     <div class="form-group">
-      <label for="email">Email address</label>
+      <label for="email" style="margin-bottom: 5px">Email address</label>
       <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password" style="margin-bottom: 5px">Password</label>
       <input type="password" class="form-control" id="password" name="password" placeholder="Password">
     </div>
     <div class="form-group">
-        <label for="confirmPassword"> Confirm password</label>
+        <label for="confirmPassword" style="margin-bottom: 5px"> Confirm password</label>
         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"placeholder="Confirm Password">
       </div>
 

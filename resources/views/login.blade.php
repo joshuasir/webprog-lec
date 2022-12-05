@@ -9,13 +9,13 @@
 
 <form action="/login" method="post">
     @csrf
-    <h1>Login</h1>
-    <div class="form-group">
-      <label for="email">Email address</label>
+    <h1 style="margin-top: 15px">Login</h1>
+    <div class="form-group" style="margin-top: 25px">
+      <label for="email" style="margin-bottom: 5px">Email address</label>
       <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" value="{{((Cookie::get('email') !== null) ? Cookie::get('email') : '')}}">
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password" style="margin-bottom: 5px">Password</label>
       <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="{{((Cookie::get('password') !== null) ? Cookie::get('password') : '')}}">
     </div>
     <div class="form-check mb-3">
