@@ -25,11 +25,11 @@
     </div>
     <div class="more">
       <h5>Category:</h5>
-      <p>{{$product->category}}</p>
+      <p style="font-size: 15px">{{$product->category}}</p>
       <h5>Price:</h5>
-      <p>Rp. {{$product->price}}</p>
+      <p style="font-size: 15px">Rp. {{$product->price}}</p>
       <h5>Description:</h5>
-      <p>{{$product->description}}</p>
+      <p style="font-size: 15px">{{$product->description}}</p>
     </div>
 
   @if(!(Session::get('user')))
@@ -54,10 +54,16 @@
       @csrf
 
         <input type="hidden" name="id" value="{{$product->id}}">
-        <label for="quantity">Quantity: </label>
-        <input class="form-control mb-2 @error('quantity') is-invalid  @enderror" type="number" name="quantity" value="{{old('quantity')}}">
+        <label for="quantity" style="font-size: 20px">
+          Quantity:
+        </label>
+        <input class="form-control mb-2 @error('quantity') is-invalid  @enderror" type="number" name="quantity" value="{{old('quantity')}}" style="font-size: 15px">
 
-      <button class="btn btn-warning btn-sm" type="submit">Add to Cart</button>
+      <button class="btn btn-warning btn-sm" type="submit" style="width: 145px">
+        <h5>
+          Add to Cart
+        </h5>
+      </button>
 
       @error('quantity')
       

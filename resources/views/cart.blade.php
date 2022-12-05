@@ -36,20 +36,38 @@
       @csrf
       <tr>
         
-          <th scope="row">{{$i+1}}</th>
+          <th scope="row">
+            <h5>
+              {{$i+1}}
+            </h5>
+          </th>
           <td>
             @if (Storage::disk('public')->exists($cartitems->cartDetail()->get()[$i]->item()->first()->image))
               <img src="{{Storage::url($cartitems->cartDetail()->get()[$i]->item()->first()->image)}}" alt="card-image" width="200" height="200">
             @else
               <img src="{{$cartitems->cartDetail()->get()[$i]->item()->first()->image}}" alt="card-image" width="200" height="200">
             @endif
-          <td>{{$cartitems->cartDetail()->get()[$i]->item()->first()->name}}</td>
-          <td>IDR {{$cartitems->cartDetail()->get()[$i]->item()->first()->price}}</td>
+          <td>
+            <h5>
+              {{$cartitems->cartDetail()->get()[$i]->item()->first()->name}}
+            </h5>
+          </td>
+          <td>
+            <h5>
+              IDR {{$cartitems->cartDetail()->get()[$i]->item()->first()->price}}
+            </h5>
+          </td>
           <td class="quantity">
-              {{$cartitems->cartDetail()->get()[$i]->quantity}} 
+              <h5>
+                {{$cartitems->cartDetail()->get()[$i]->quantity}}  
+              </h5> 
           </td>
         
-          <td class="total-price">IDR {{$cartitems->cartDetail()->get()[$i]->quantity*$cartitems->cartDetail()->get()[$i]->item()->first()->price}}</td>
+          <td class="total-price">
+            <h5>
+              IDR {{$cartitems->cartDetail()->get()[$i]->quantity*$cartitems->cartDetail()->get()[$i]->item()->first()->price}}
+            </h5>
+          </td>
           <td>
               <input type="hidden" name="cart_id" value="{{$cartitems->cartDetail()->get()[$i]->cart_id}}">
               <input type="hidden" name="item_id" value="{{$cartitems->cartDetail()->get()[$i]->item_id}}">
@@ -64,7 +82,11 @@
       @endfor
     </tbody>
   </table>
-  <span > Grand Total: <span class="grand-total">IDR {{$cartitems->sum}}</span> </span>
+
+  <span style="font-size: 25px">
+    Grand Total:
+  <span class="grand-total">IDR {{$cartitems->sum}}</span> </span>
+  
 </div>
 
 
@@ -81,7 +103,7 @@
         <label for="address">Receiver address</label>
         <input type="address" class="form-control" id="address" name="address" placeholder="Enter address" >
       </div>
-      <button class="btn btn-warning btn-sm" type="submit" >Checkout ({{$cartitems->ctr}})</button>
+      <button class="btn btn-warning btn-sm" type="submit" style="width: 175px; height: 40px">Checkout ({{$cartitems->ctr}})</button>
       @if($errors->any())
       <div class="alert alert-danger" role="alert">
           {{$errors->first()}}
