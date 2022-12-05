@@ -24,17 +24,19 @@
       <h3>{{$product->name}}</h3>
     </div>
     <div class="more">
-      <h6>Category:</h6>
+      <h5>Category:</h5>
       <p>{{$product->category}}</p>
-      <h6>Price:</h6>
-      <p>IDR {{$product->price}}</p>
-      <h6>Description:</h6>
+      <h5>Price:</h5>
+      <p>Rp. {{$product->price}}</p>
+      <h5>Description:</h5>
       <p>{{$product->description}}</p>
     </div>
 
   @if(!(Session::get('user')))
   <a href="/login">
-    <div class="btn btn-warning btn-sm">Login to buy</div>
+    <div class="btn btn-warning btn-sm">
+      Login to Buy
+    </div>
   </a>
   @endif
 
