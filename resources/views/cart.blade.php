@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container">
-  <h1> My Cart</h1>
+  <h1 style="margin-top: 25px"> My Cart</h1>
   @if($cartitems!=null && count($cartitems->cartDetail()->get())>0)
   @if(session()->has('success'))
   <div class="alert alert-dark alert-dismissible fade show d-flex" role="alert">
@@ -18,7 +18,7 @@
     </button>
   </div>
   @endif
-  <table class="table table-striped cart-table">
+  <table class="table table-striped cart-table" style="margin-top: 20px">
     <thead class="thead-dark">
       <tr>
         <th scope="col">No</th>
