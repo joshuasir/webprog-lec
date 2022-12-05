@@ -11,7 +11,7 @@
 @if(Session::get('user') || true)
   <form action="/{{strtolower($category)}}" type="get" class="searchbar">
     <div class="input-group justify-content-center">
-      <input type="text" class="form-control" name="search" value = "{{request('search')}}" placeholder="Search product..." aria-label="Search product..." aria-describedby="button-addon2">
+      <input type="text" class="form-control" name="search" value = "{{request('search')}}" placeholder="Search Product . . ." aria-label="Search product..." aria-describedby="button-addon2">
       <div class="input-group-append">
         <button class="btn btn-primary" type="submit">Search</button>
       </div>
@@ -32,19 +32,40 @@
           @endif
         </div>
         <div class="custom-card-text">
-          <a href="/products/{{$p->id}}"><h5 class="card-title mb-4">{{$p->name}}</h5></a>
-          <div class="top-info">
+          <center>
+            <a href="/products/{{$p->id}}"><h3 class="card-title mb-4">{{$p->name}}</h3></a>
+          </center>
+          
+          <div class="top-info" style="margin-top: 25px">
             <div class="info ">
-              <h6>Category:</h6>
-              <p>{{$p->category}}</p>
+              <center>
+                <h3>Category</h3>
+              </center>
+              
+              <center>
+                <h4>{{$p->category}}</h4>
+              </center>
+              
             </div>
             <div class="info right">
-              <h6>Price:</h6>
-              <p>IDR {{$p->price}}</p>
+              <center>
+                <h3>Price</h3>
+              </center>
+              
+              <center>
+                <h4>Rp. {{$p->price}}</h4>
+              </center>
+              
             </div>
           </div>
-          <a href="/products/{{$p->id}}" >
-            <div class="btn btn-primary btn-sm">See detail </div>
+          <a href="/products/{{$p->id}}">
+            <center>
+              <div class="btn btn-primary btn-sm" style="margin-top: 75px; padding: 5px 15px; margin-bottom: 25px">
+                <h5 style="color: aliceblue">
+                  See Detail
+                </h5>
+              </div>
+            </center>
           </a>
   
         </div>
