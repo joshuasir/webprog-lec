@@ -1,3 +1,5 @@
+
+
 @extends('layout.shared')
 
 @section('style')
@@ -10,6 +12,7 @@
     <section class="banner">
         <h1>Resto</h1>
     </section>
+    @if($favourites->count())
     <section class="favourite">
         <h3>Favourite items</h3>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -40,7 +43,7 @@
             </a>
           </div>
     </section>
-        
+    @endif
        
     
     
