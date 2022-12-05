@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<form action="/register" method="post">
+<form action="/register" method="post" style="margin-left: 550px">
     @csrf
     <h1 style="margin-top: 15px">Register</h1>
     <div class="form-group" style="margin-top: 25px">
@@ -37,10 +37,13 @@
         </div>
     
     @endif   
-  </form>
+</form>
 
-  <div class="login-container">
+  <div class="login-container" style="margin-left: 600px">
     <p>Already have an account?</p>
     <a href="/login"><button class="btn btn-outline-primary">Login</button></a>
+  </div>
+  <div style="margin-top: 75px">
+
   </div>
 @endsection

@@ -7,7 +7,7 @@
 
 @section('content')
 
-<form action="/login" method="post">
+  <form action="/login" method="post" style="margin-left: 550px">
     @csrf
     <h1 style="margin-top: 15px">Login</h1>
     <div class="form-group" style="margin-top: 25px">
@@ -34,9 +34,10 @@
     @endif 
   </form>
 
-  <div class="register-container">
+
+<div class="register-container" style="margin-left: 600px">
     <p>Don't have an account yet?</p>
     <a href="/register"><button class="btn btn-outline-primary">Register</button></a>
-  </div>
+</div>
 
 @endsection
