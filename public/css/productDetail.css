@@ -1,24 +1,30 @@
+.product_box{
+    display:flex;
+}
 .container {
     display: flex;
-    height: 32em;
-    width: auto;
+    height: 35em;
+    width: 50em;
 
-    padding: 2em;
+    background-color: #FFFAF0;
+    padding: 3em;
     margin: auto;
-    margin-top: 5em;
+    margin-top: 7em;
     border-radius: 12px;
     border: 1px solid rgb(197, 197, 197);
     margin-bottom: 18em;
 }
 
 .img-box {
-    height: 20em;
+    height: 35em;
+    width: 30em;
+    margin-top: 5em;
     margin-right: 2em;
 }
 
 .img-box img {
-    height: 20em;
-    width: auto;
+    height: 35em;
+    width: 35em;
     border-radius: 24px;
 }
 
@@ -31,12 +37,20 @@
 
 .title h3 {
     font-weight: 700;
+    font-family: 'Coolvetica';
     font-size: 3.5rem;
+}
+
+.price {
+    font-family: 'Coolvetica';
+    color: #A9A9A9;
+    font-size: 1.5rem;
 }
 
 .more{
     font-size: 2rem;
     font-weight: 400;
+    font-family: 'Coolvetica';
     border-radius: 20px;
     color: #696969;
 }
