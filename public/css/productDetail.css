@@ -38,18 +38,18 @@
 .title h3 {
     font-weight: 700;
     font-family: 'Coolvetica';
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .price {
     font-family: 'Coolvetica';
     color: #A9A9A9;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .more{
     font-size: 2rem;
-    font-weight: 400;
+
     font-family: 'Coolvetica';
     border-radius: 20px;
     color: #696969;

@@ -54,7 +54,7 @@
           
           <input class="form-control mb-2 @error('quantity') is-invalid  @enderror" type="number" name="quantity" min="1" max="100" value="{{old('quantity')}}" style="font-size: 15px; width: 5em">
   
-        <button class="btn btn-warning btn-sm" type="submit" style="width: 25em; height: 6em;">
+        <button class="btn btn-warning btn-sm" type="submit" style="width: 22em; height: 6.5em;">
           <h5>
             Add to Cart
           </h5>
