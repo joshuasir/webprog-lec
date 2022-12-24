@@ -3,8 +3,6 @@
 @extends('layout.shared')
 
 @section('style')
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="{{ asset('/css/home.css') }}"/>
 @endsection
@@ -54,8 +52,5 @@
        
     
     
-    <section class="about">
-        <h3>ABOUT</h3>
-        <h5>We serve good food, quality food, the best of food</h5>
-    </section>
+
 @endsection

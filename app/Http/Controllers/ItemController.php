@@ -13,7 +13,7 @@ class ItemController extends BaseController
     public  function indexProductsFood()
     {
         return view('products', [
-            'title' => 'Food Products',
+            'title' => 'Foods',
             'products' => Item::latest()
                 ->where('category','=','Food')
                 ->filter()
@@ -26,7 +26,7 @@ class ItemController extends BaseController
     public  function indexProductsDrink()
     {
         return view('products', [
-            'title' => 'Drink Products',
+            'title' => 'Drinks',
             'products' => Item::latest()
                 ->where('category','=','Beverage')
                 ->filter()
@@ -39,7 +39,7 @@ class ItemController extends BaseController
     public  function indexProductsDessert()
     {
         return view('products', [
-            'title' => 'Dessert Products',
+            'title' => 'Desserts',
             'products' => Item::latest()
                 ->where('category','=','Dessert')
                 ->filter()

@@ -7,11 +7,26 @@
 
 @section('content')
 <div class="container">
-<h1 class="text-center mb-4">{{$title}}</h1>
+  <div class="center">
+    <h1>
+      <span>{{$title}}</span>
+      @if($title=="Foods")
+      <span style="color: #ffbf10">{{$title}}</span>
+      @elseif ($title=="Drinks")
+      <span style="color:aqua">{{$title}}</span>
+      @else
+      <span style="color: cornsilk">{{$title}}</span>
+      @endif
+
+      <span>{{$title}}</span>
+    
+    </h1>
+  </div>
+{{-- <h1 class="text-center mb-4">{{$title}}</h1> --}}
 @if(Session::get('user') || true)
   <form action="/{{strtolower($category)}}" type="get" class="searchbar">
     <div class="input-group justify-content-center">
-      <input type="text" class="form-control" name="search" value = "{{request('search')}}" placeholder="Search Product . . ." aria-label="Search product..." aria-describedby="button-addon2">
+      <input type="text" class="form-control" name="search" value = "{{request('search')}}" placeholder="Search Item..." aria-label="Search product..." aria-describedby="button-addon2">
       <div class="input-group-append">
         <button class="btn btn-primary" type="submit">Search</button>
       </div>
@@ -23,53 +38,30 @@
   <div class="row">
     @foreach ($products as $p)
     <div class="col-md-4 col-sm-12">
+      <a href="/products/{{$p->id}}"> 
       <div class="card">
-        <div class="card-img-top">
+        
           @if (Storage::disk('public')->exists($p->image))
-            <img src="{{Storage::url($p->image)}}" alt="card-image">
+          <div style="background-image: url({{Storage::url($p->image)}})"  class="custom-card-text">
+            {{-- <img src="{{Storage::url($p->image)}}" alt="card-image"> --}}
           @else
-            <img src="{{$p->image}}" alt="card-image">
+          <div style="background-image: url({{$p->image}})"  class="custom-card-text">
+            {{-- <img src="{{$p->image}}" alt="card-image"> --}}
           @endif
-        </div>
-        <div class="custom-card-text">
-          <center>
-            <a href="/products/{{$p->id}}"><h3 class="card-title mb-4">{{$p->name}}</h3></a>
-          </center>
+        
+        {{-- <div class="custom-card-text"> --}}
           
-          <div class="top-info" style="margin-top: 25px">
-            <div class="info ">
-              <center>
-                <h3>Category</h3>
-              </center>
-              
-              <center>
-                <h4>{{$p->category}}</h4>
-              </center>
-              
-            </div>
-            <div class="info right">
-              <center>
-                <h3>Price</h3>
-              </center>
-              
-              <center>
-                <h4>Rp. {{$p->price}}</h4>
-              </center>
-              
-            </div>
-          </div>
-          <a href="/products/{{$p->id}}">
-            <center>
-              <div class="btn btn-primary btn-sm" style="margin-top: 75px; padding: 5px 15px; margin-bottom: 25px">
-                <h5 style="color: aliceblue">
-                  See Detail
-                </h5>
-              </div>
-            </center>
-          </a>
-  
+          
         </div>
+        <div class="info left">
+          <h1 class="card-title">{{$p->name}}</h1>
+          
+            <span>Rp. {{$p->price}}</span>
+          
+            
+          </div>
       </div>
+    </a>
     </div>
     @endforeach
     <div class="d-flex justify-content-center">

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
      <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}" >
      <link rel="stylesheet" href="{{ asset('/css/layout.css') }}"/>    
 
@@ -24,17 +26,17 @@
 
               <li class="nav-item active">
                 <a class="nav-link" href="/">
-                  <h6>
+                  <b>
                     Home
-                  </h6>
+                  </b>
                   
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <h6>
+                  <b>
                     Menu
-                  </h6>
+                  </b>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="/food">Foods</a>

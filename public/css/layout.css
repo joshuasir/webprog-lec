@@ -1,22 +1,31 @@
+@font-face {
+    font-family: "Coolvetica";
+    src: url("/../fonts/Coolvetica/coolveticarg.otf")
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+  
 * {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
+    transition: all .5s;
 }
 
 .navbar {
-    background-color: #DA291C;
+    background-color: transparent;
     color: #eef2e6;
-    padding: 1em 2em;
-
+    padding: 2em 2em;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    width: 100%;
     transition: ease-in-out 0.2s;
-    font-size: 16px;
+    font-size: 1rem;
+    z-index: 999;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -26,29 +35,33 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #d6cda4;
+    color: #ffd621;
 }
 
 .footer {
-    background-color: #DA291C;
+    background-color: #201e1e;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #eef2e6;
-    padding: 1em 0em;
+    padding: 2em 0em;
     bottom: 0;
 }
 
-.content {
-    min-height: 85vh;
-    /* padding-top: 1em; */
+.footer p{
+    font-size: 1rem;
 }
 
-.content form {
+/* .content {
+    min-height: 85vh;
+    padding-top: 1em;
+} */
+
+/* .content form {
     padding-inline: 3em;
-}
+} */
 
 .searchbar {
     width: 32em;
