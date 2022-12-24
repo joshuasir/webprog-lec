@@ -7,8 +7,9 @@
 @endsection
 
 @section('content')
-<div class="container">
-  <h1 style="margin-top: 25px"> My Cart</h1>
+<div style="height: 50em" class="container d-flex flex-row justify-content-center w-100 m-0 mt-5 mw-100 w-100">
+<div style="width:55em">
+  {{-- <h1 style="margin-top: 25px"> My Cart</h1> --}}
   @if($cartitems!=null && count($cartitems->cartDetail()->get())>0)
   @if(session()->has('success'))
   <div class="alert alert-dark alert-dismissible fade show d-flex" role="alert">
@@ -42,38 +43,46 @@
             </h5>
           </th>
           <td>
+            <div class="d-flex align-items-start justify-content-start">
             @if (Storage::disk('public')->exists($cartitems->cartDetail()->get()[$i]->item()->first()->image))
-              <img src="{{Storage::url($cartitems->cartDetail()->get()[$i]->item()->first()->image)}}" alt="card-image" width="200" height="200">
+              <img src="{{Storage::url($cartitems->cartDetail()->get()[$i]->item()->first()->image)}}" alt="card-image" width="45px" height="45px">
             @else
-              <img src="{{$cartitems->cartDetail()->get()[$i]->item()->first()->image}}" alt="card-image" width="200" height="200">
+              <img src="{{$cartitems->cartDetail()->get()[$i]->item()->first()->image}}" alt="card-image" width="45px" height="45px">
             @endif
+            </div>
           <td>
-            <h5>
+            <p class="muted">
               {{$cartitems->cartDetail()->get()[$i]->item()->first()->name}}
-            </h5>
+            </p>
           </td>
           <td>
-            <h5>
+            <p class="muted">
               IDR {{$cartitems->cartDetail()->get()[$i]->item()->first()->price}}
-            </h5>
+            </p>
           </td>
           <td class="quantity">
-              <h5>
+            <p class="muted">
                 {{$cartitems->cartDetail()->get()[$i]->quantity}}  
-              </h5> 
+              </p>
           </td>
         
           <td class="total-price">
-            <h5>
+            <p class="muted">
               IDR {{$cartitems->cartDetail()->get()[$i]->quantity*$cartitems->cartDetail()->get()[$i]->item()->first()->price}}
-            </h5>
+            </p>
           </td>
           <td>
               <input type="hidden" name="cart_id" value="{{$cartitems->cartDetail()->get()[$i]->cart_id}}">
               <input type="hidden" name="item_id" value="{{$cartitems->cartDetail()->get()[$i]->item_id}}">
               <div id="action">
-              <button class="btn btn-danger btn-sm" formaction="/deleteCartItem" type="submit" >Delete</button>
-              <a href="/updateCartQuantity/{{$cartitems->cartDetail()->get()[$i]->item()->first()->id}}"><button type="button" class="btn btn-warning btn-sm" >Update</button></a>
+              <a href="/updateCartQuantity/{{$cartitems->cartDetail()->get()[$i]->item()->first()->id}}" class="btn btn-link btn-rounded btn-sm fw-bold text-decoration-none mb-2"
+                data-mdb-ripple-color="dark">
+              
+                Edit
+           
+              {{-- <button type="button" class="btn btn-warning btn-sm" >Update</button> --}}
+            </a>
+            <button class="btn btn-danger btn-sm" formaction="/deleteCartItem" type="submit" >Delete</button>
               
               </div>
           </td>
@@ -83,14 +92,14 @@
     </tbody>
   </table>
 
-  <span style="font-size: 25px">
-    Grand Total:
-  <span class="grand-total">IDR {{$cartitems->sum}}</span> </span>
+  <span style="font-size: 1.2rem">
+    Grand Total: IDR 
+  <span class="grand-total">{{$cartitems->sum}}</span> </span>
   
 </div>
 
 
-<div class="checkout-form">
+<div class="checkout-form p-3" style="width: 20em;">
     <form action="/checkout" method="post">
       <h3>Send To...</h3>
       @csrf
@@ -103,7 +112,7 @@
         <label for="address">Receiver address</label>
         <input type="address" class="form-control" id="address" name="address" placeholder="Enter address" >
       </div>
-      <button class="btn btn-warning btn-sm" type="submit" style="width: 175px; height: 40px">Checkout ({{$cartitems->ctr}})</button>
+      <button class="btn btn-success btn-sm" type="submit" style="width: 175px; height: 40px">Checkout ({{$cartitems->ctr}})</button>
       @if($errors->any())
       <div class="alert alert-danger" role="alert">
           {{$errors->first()}}
@@ -114,11 +123,11 @@
   <div class="trash d-flex justify-content-center">
     <!-- <img src="https://img.freepik.com/premium-vector/sketched-empty-trash-bin-desktop-icon-trash-can-vector-sketch-illustration_231873-3361.jpg?w=2000" alt=""> -->
   
-  <h1 class="text-center pb-5 mt-5 pt-5">cart is empty! Let’s go shopping :) </h1>
+  <h1 class="text-center pb-5 mt-5 pt-5">cart is empty! Let’s go shopping</h1>
   </div>
   @endif
   </div>
-
+</div>
   @endsection
 
 

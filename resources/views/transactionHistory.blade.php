@@ -1,9 +1,12 @@
 @extends('layout.shared')
 @section('title','Transaction History')
+@section('style')
+<link rel="stylesheet" href="{{ asset('/css/transaction.css') }}"/>
 
+@endsection
 @section('content')
-    <div class="container mb-5" style="margin-top: 25px">
-        <h1>My Transaction History</h1>
+    <div style="margin-top: 8em;" class="container mb-5" >
+        <h1>Transaction History</h1>
         @if($histories!=null && count($histories)>0)
 
     <div class="accordion mt-4" id="accordion">

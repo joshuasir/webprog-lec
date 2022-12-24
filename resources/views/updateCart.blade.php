@@ -8,7 +8,7 @@
 
 @section('content')
 @if($product)
-<div class="container">
+<div class="product_box d-flex justify-content-center">
 
   <div class="img-box">
     @if (Storage::disk('public')->exists($product->image))
@@ -18,18 +18,18 @@
     @endif
   </div>
 
-
+  <div class="container m-0">
   <div class="info">
-    <div class="title">
-      <h3>{{$product->name}}</h3>
+
+    <div class="title mb-0">
+      <h3 class="mb-0" style="line-height: .8">{{$product->name}}</h3>
+    </div>
+    <div class="price">
+      <p> Rp. {{$product->price}}</p>
+      
     </div>
     <div class="more">
-      <h5>Category:</h5>
-      <p style="font-size: 15px">{{$product->category}}</p>
-      <h5>Price:</h5>
-      <p style="font-size: 15px">IDR {{$product->price}}</p>
-      <h5>Description:</h5>
-      <p style="font-size: 15px">{{$product->description}}</p>
+      <p>{{$product->description}}</p>
     </div>
 
   @if(!(Session::get('user')))
@@ -70,6 +70,7 @@
   </div>
   </div>
   @endif
+</div>
 </div>
 @else
 <div class="h1">

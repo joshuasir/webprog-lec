@@ -1,5 +1,8 @@
 .product_box{
     display:flex;
+    /* margin-top: 2em; */
+    height: 60em;
+    align-items: center;
 }
 .container {
     display: flex;
@@ -10,7 +13,7 @@
     padding: 3em;
     margin: auto;
     margin-top: 7em;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     border: 1px solid rgb(197, 197, 197);
     margin-bottom: 18em;
 }
@@ -18,8 +21,8 @@
 .img-box {
     height: 35em;
     width: 30em;
-    margin-top: 5em;
-    margin-right: 2em;
+    /* margin-top: 5em;
+    margin-right: 2em; */
 }
 
 .img-box img {
@@ -43,16 +46,18 @@
 
 .price {
     font-family: 'Coolvetica';
-    color: #A9A9A9;
-    font-size: 1.8rem;
+    
+    color: #696969;
+    font-size: 1.2rem;
+    
 }
 
 .more{
-    font-size: 2rem;
+    font-size: 1.2rem;
 
     font-family: 'Coolvetica';
-    border-radius: 20px;
-    color: #696969;
+    /* border-radius: 20px; */
+    color: #A9A9A9;
 }
 
 .btn {
@@ -88,9 +93,11 @@
 }
 
 .qty-form button:hover {
-    background-color: #1c6758;
+    /* background-color: ; */
 }
-
+.navbar{
+    background-color: #201e1e;
+}
 .error-message {
     color: rgb(184, 0, 0);
     font: bold;

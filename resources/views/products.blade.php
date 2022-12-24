@@ -54,9 +54,9 @@
           
         </div>
         <div class="info left">
-          <h1 class="card-title">{{$p->name}}</h1>
+          <h1 style="line-height: .6em;" class="card-title">{{$p->name}}</h1>
           
-            <span>Rp. {{$p->price}}</span>
+            <span style="font-weight:100; font-size:1.5rem">Rp. {{$p->price}}</span>
           
             
           </div>
@@ -72,11 +72,8 @@
 
 
 @else
-<div class="trash">
-  <img src="https://img.freepik.com/premium-vector/sketched-empty-trash-bin-desktop-icon-trash-can-vector-sketch-illustration_231873-3361.jpg?w=2000" alt="">
 
-</div>
-<h1 class="text-center pb-5">No Products Available</h1>
+<h1 class="text-center pb-5 empty">No Products Available</h1>
 @endif
 </div>
 @endsection
