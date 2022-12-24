@@ -1,3 +1,5 @@
+
+
 @extends('layout.shared')
 
 @section('style')
@@ -19,16 +21,7 @@
     </section>
     @if($favourites->count())
     <section class="favourite">
-        {{-- <h3>Favourite items</h3> --}}
-        <div class="center">
-            <h1>
-              <span>Favourite items</span>
-            
-              <span>Favourite items</span>
-              <span>Favourite items</span>
-            
-            </h1>
-          </div>
+        <h3>Favourite items</h3>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 @foreach ($favourites as $favourite)
@@ -41,7 +34,7 @@
                 <div class="carousel-item {{$loop->index==0 ? 'active':''}}">
                     <img class="d-block w-25" src="{{$favourite->image}}" alt="First slide" style="margin-inline:auto">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>{{$favourite->name}}</h5>
+                        <h5 style="color: darkgrey">{{$favourite->name}}</h5>
                     
                     </div>
                 </div>
@@ -61,5 +54,8 @@
        
     
     
-    
+    <section class="about">
+        <h3>ABOUT</h3>
+        <h5>We serve good food, quality food, the best of food</h5>
+    </section>
 @endsection

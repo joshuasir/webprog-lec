@@ -24,17 +24,19 @@
       <h3>{{$product->name}}</h3>
     </div>
     <div class="more">
-      <h6>Category:</h6>
-      <p>{{$product->category}}</p>
-      <h6>Price:</h6>
-      <p>IDR {{$product->price}}</p>
-      <h6>Description:</h6>
-      <p>{{$product->description}}</p>
+      <h5>Category:</h5>
+      <p style="font-size: 15px">{{$product->category}}</p>
+      <h5>Price:</h5>
+      <p style="font-size: 15px">Rp. {{$product->price}}</p>
+      <h5>Description:</h5>
+      <p style="font-size: 15px">{{$product->description}}</p>
     </div>
 
   @if(!(Session::get('user')))
   <a href="/login">
-    <div class="btn btn-warning btn-sm">Login to buy</div>
+    <div class="btn btn-warning btn-sm">
+      Login to Buy
+    </div>
   </a>
   @endif
 
@@ -52,10 +54,16 @@
       @csrf
 
         <input type="hidden" name="id" value="{{$product->id}}">
-        <label for="quantity">Quantity: </label>
-        <input class="form-control mb-2 @error('quantity') is-invalid  @enderror" type="number" name="quantity" value="{{old('quantity')}}">
+        <label for="quantity" style="font-size: 20px">
+          Quantity:
+        </label>
+        <input class="form-control mb-2 @error('quantity') is-invalid  @enderror" type="number" name="quantity" value="{{old('quantity')}}" style="font-size: 15px">
 
-      <button class="btn btn-warning btn-sm" type="submit">Add to Cart</button>
+      <button class="btn btn-warning btn-sm" type="submit" style="width: 145px">
+        <h5>
+          Add to Cart
+        </h5>
+      </button>
 
       @error('quantity')
       

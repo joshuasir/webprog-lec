@@ -23,11 +23,18 @@
           <ul class="navbar-nav mr-auto left">
 
               <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">
+                  <h6>
+                    Home
+                  </h6>
+                  
+                </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menu
+                  <h6>
+                    Menu
+                  </h6>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="/food">Foods</a>
@@ -93,7 +100,7 @@
     </div>
 
     <div class="footer">
-        <p>©2022 Copyright Resto</p>
+        <h5>©2022 Copyright Resto</h5>
         
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
