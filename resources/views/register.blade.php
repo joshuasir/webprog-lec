@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<div class="container">
 <form action="/register" method="post">
     @csrf
     <h1>Register</h1>
@@ -43,4 +44,5 @@
     <p>Already have an account?</p>
     <a href="/login"><button class="btn btn-outline-primary">Login</button></a>
   </div>
+</div>
 @endsection

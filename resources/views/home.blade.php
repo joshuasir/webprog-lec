@@ -1,6 +1,9 @@
 @extends('layout.shared')
 
 @section('style')
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="{{ asset('/css/home.css') }}"/>
 @endsection
 
@@ -10,8 +13,22 @@
     <section class="banner">
         <h1>Resto</h1>
     </section>
+    <section class="about">
+        <h3>about</h3>
+        <h5>We serve the best food made with fresh ingredients by skilled chefs. Our menu has options for every palate. Our friendly staff provides excellent service. Come try us and taste the difference – we know you'll agree that we serve good food, quality food, the best of food.</h5>
+    </section>
+    @if($favourites->count())
     <section class="favourite">
-        <h3>Favourite items</h3>
+        {{-- <h3>Favourite items</h3> --}}
+        <div class="center">
+            <h1>
+              <span>Favourite items</span>
+            
+              <span>Favourite items</span>
+              <span>Favourite items</span>
+            
+            </h1>
+          </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 @foreach ($favourites as $favourite)
@@ -40,12 +57,9 @@
             </a>
           </div>
     </section>
-        
+    @endif
        
     
     
-    <section class="about">
-        <h3>ABOUT</h3>
-        <h5>We serve good food, quality food, the best of food</h5>
-    </section>
+    
 @endsection
