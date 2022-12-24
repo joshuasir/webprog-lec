@@ -28,14 +28,14 @@
         {{$errors->first()}}
     </div>
     @elseif(session()->has('register_success'))
-        <div class="alert alert-success mt-4">
+        <div class="alert alert-success mt-4" style="width: 325px">
             {{ session()->get('register_success') }}
         </div>
     @endif 
   </form>
 
 
-<div class="register-container" style="margin-left: 600px">
+<div class="register-container" style="margin-left: 550px">
     <p>Don't have an account yet?</p>
     <a href="/register"><button class="btn btn-outline-primary">Register</button></a>
 </div>

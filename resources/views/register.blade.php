@@ -27,7 +27,7 @@
 
     <button type="submit" class="btn btn-primary">Register</button>
     @if($errors->any())
-    <div class="alert alert-danger mt-4" role="alert">
+    <div class="alert alert-danger mt-4" role="alert" style="width: 320px">
         {{$errors->first()}}
     </div>
   
@@ -39,7 +39,7 @@
     @endif   
 </form>
 
-  <div class="login-container" style="margin-left: 600px">
+  <div class="login-container" style="margin-left: 550px">
     <p>Already have an account?</p>
     <a href="/login"><button class="btn btn-outline-primary">Login</button></a>
   </div>
