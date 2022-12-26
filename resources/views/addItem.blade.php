@@ -12,26 +12,24 @@
 
     <h3>Add Item</h3>
 
-    <div class="form-row">
-      <div class="form-input">
-        <label for="id">Item ID</label>
-        <input type="text" id="id" name="id" value="{{old('id')}}">
-        @error('id')
-        <p class="text-danger">
-         {{$message}}
-       </p>   
-       @enderror
-      </div>
-
-      <div class="form-input">
-        <label for="name">Item Name</label>
-        <input type="text" id="name" name="name" value="{{old('name')}}">
-        @error('name')
-        <p class="text-danger">
-         {{$message}}
-       </p>   
-       @enderror
-      </div>
+    <div class="form-input">
+      <label for="id">Item ID</label>
+      <input type="text" id="id" name="id" value="{{old('id')}}">
+      @error('id')
+      <p class="text-danger">
+       {{$message}}
+     </p>   
+     @enderror
+    </div>
+    <div class="form-input">
+      <label for="name">Item Name</label>
+      <input type="text" id="name" name="name" value="{{old('name')}}">
+      @error('name')
+      <p class="text-danger">
+       {{$message}}
+     </p>   
+     @enderror
+    </div>
 
     <div class="form-input">
       <label for="price">Price (IDR)</label>
@@ -41,7 +39,6 @@
        {{$message}}
      </p>   
      @enderror
-    </div>
     </div>
 
     <div class="form-row">
@@ -62,7 +59,7 @@
       </div>
     </div>
 
-    <div class="form-row">
+
       <div class="image">
         <label for="image">Add Image</label>
         <input type="file" class="form-control" name="image" id="image">
@@ -72,7 +69,7 @@
         </p>   
         @enderror
       </div>
-    </div>
+
 
     <div class="preview">
       <img id="preview-image" src="http://flxtable.com/wp-content/plugins/pl-platform/engine/ui/images/image-preview.png" 
@@ -91,7 +88,7 @@
       </div>
     </div>
 
-  <button type="submit" class="btn btn-primary">Add Item</button>
+  <button type="submit" class="btn btn-primary" style="margin-left: 40em">Add Item</button>
 </form>
 
 

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding: 2em;
+    padding: 3em;
     background-color: rgba(211, 211, 211, 0.28);
     max-width: 90%;
     margin-left: 2em;
@@ -27,13 +27,22 @@
 }
 
 .form-row select {
-    border-radius: 2em;
+    border-radius: 0.2em;
     padding: 0.2em 0.3em;
+    margin-left: 15em;
 }
 
 .form-input {
     display: flex;
-    flex-direction: column;
+    border-radius: 2em;
+}
+
+.form-input input {
+    border-radius: 0.2em;
+    margin-left: 15em;
+    padding: 0.2em 0.3em;
+    border-width: 0.05em;
+    width: 20em;
 }
 
 #desc {
@@ -45,7 +54,18 @@
     width: 12em;
 }
 
+.image{
+    display: flex;
+}
+
+.preview{
+    margin-left: 15em;
+}
+
 .image input {
+    border-radius: 0.2em;
+    padding: 0.2em 0.3em;
+    margin-left: 15em;
     width: 16em;
 }
 
