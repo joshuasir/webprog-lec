@@ -2,13 +2,19 @@
     margin: auto;
     min-width: 95%;
     margin-bottom: 2em;
+    padding-top: 8em;
 }
 
 .table-striped > tbody > tr:nth-child(2n + 1) > td,
 .table-striped > tbody > tr:nth-child(2n + 1) > th {
     background-color: #e8f9fd;
 }
-
+.navbar{
+    background-color: #201e1e;
+}
+h1{
+    font-family: 'Coolvetica';
+}
 th {
     color: #0aa1dd;
     font-size: smaller;
@@ -17,16 +23,17 @@ th {
 td {
     min-height: 4em;
     font-size: smaller;
+    font-size: .9rem;
 }
 
 .item-img {
-    width: 32px;
-    height: 32px;
+    width: 5em;
+    height: 5em;
     border-radius: 4px;
 }
 .update-delete {
-    display: flex;
-    align-items: top;
+    /* display: flex; */
+    /* align-items: top; */
 }
 
 .update-delete form {

@@ -1,9 +1,19 @@
 @font-face {
     font-family: "Coolvetica";
     src: url("/../fonts/Coolvetica/coolveticarg.otf")
-  }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+}
+
+@font-face {
+    font-family: "LemonMilk";
+    src: url('/../fonts/LemonMilk/LEMONMILK-Bold.otf');
+}
+
+@font-face {
+    font-family: "LemonMilk-reg";
+    src: url('/../fonts/LemonMilk/LEMONMILK-Regular.otf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
   
 * {
     margin: 0;
@@ -13,7 +23,9 @@
         sans-serif;
     transition: all .5s;
 }
-
+html{
+    overflow-x: hidden;
+}
 .navbar {
     background-color: transparent;
     color: #eef2e6;

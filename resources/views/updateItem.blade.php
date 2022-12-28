@@ -6,48 +6,68 @@
 @endsection
 
 @section('content')
-
+<div class="container" style="padding-top:10em">
+  <h1>Update Item</h1>
 @if(Session::get('user')['role'] === 'admin')
 <form action="/updateItem/{{$product->id}}" method="post" class="item-form" enctype="multipart/form-data">
   @method('put')
   @csrf
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline d-flex flex-column">
+        <label class="form-label" for="id">Item ID</label>
 
-    <h3>Update Item</h3>
-
-    <div class="form-row">
-      <div class="form-input">
-        <label for="id">Item ID</label>
-        <input type="hidden" name="id" value="{{$product->id}}">
-        <div class="unchanged">
-          {{$product->id}}
-        </div>
+        <input class="form-control" type="text" id="name" name="id" value="{{$product->id}}" readonly>
+        
       </div>
-
-      <div class="form-input">
-        <label for="name">Item Name</label>
-        <input type="text" id="name" name="name" value=" {{old('name', $product->name)}}">
+    </div>
+  </div>
+  <div class="row mb-4">
+    
+    <div class="col">
+      <div class="form-outline d-flex flex-column">
+        <label class="form-label" for="name">Item Name</label>
+        <input class="form-control" type="text" id="name" name="name" value=" {{old('name', $product->name)}}">
         @error('name')
         <p class="text-danger">
          {{$message}}
        </p>   
        @enderror
       </div>
-
-    <div class="form-input">
-      <label for="price">Price (IDR)</label>
-      <input type="text" id="price" name="price" value="{{old('price', $product->price)}}" >
+    </div>
+    <div class="col">
+      <div class="form-outline d-flex flex-column">
+        <label class="form-label" for="price">Price (IDR)</label>
+      <input class="form-control" type="text" id="price" name="price" value="{{old('price', $product->price)}}" >
       @error('price')
       <p class="text-danger">
        {{$message}}
      </p>   
      @enderror
+      </div>
     </div>
+  </div>
+  <div class="row mb-4">
+    
+    <div class="col w-100">
+      <div class="form-outline d-flex flex-column">
+        <label class="form-label" for="desc" >Description</label>
+        <textarea class="form-control" name="description" id="desc" value="{{old('description', $product->description) }}">{{old('description', $product->description) }}</textarea>
+          @error('description')
+          <p class="text-danger">
+          {{$message}}
+          </p>   
+        @enderror
+      </div>
     </div>
-
-    <div class="form-row">
-      <div class="form-input">
-        <label for="category">Category</label>
-        <select name="category" id="category">
+    
+  </div>
+  <div class="row mb-4">
+    
+    <div class="col">
+      <div class="form-outline d-flex flex-column">
+        <label class="form-label" for="category">Category</label>
+        <select class="form-control" name="category" id="category">
           <optgroup label="Choose category">
           <option value="select">Select a category</option>
           <option value="Food"
@@ -73,55 +93,42 @@
        @enderror
       </div>
     </div>
-
-
-
-
-    <div class="form-row">
-      <div class="image update-image-form">
-        <div class="form-row">
-          <div class="update-image">
-            <label for="image">Update Image</label>
-            <input type="file" class="form-control" name="image" id="image">
-          </div>
-          <div class="update-image">
-            <label for="">Old Image File</label>
-            <div class="unchanged unchanged-img mb-2">
-              {{$product->image}}
-            </div>
-          </div>
+    <div class="col">
+      <div class="form-outline d-flex flex-column">
+        <div class="update-image mb-2">
+          <label class="form-label" for="image">Update Image</label>
+          <input type="file" class="form-control" name="image" id="image">
         </div>
-      </div>
-    </div>
-      @error('image')
-      <p class="text-danger">
-      {{$message}}
-      </p>   
-     @enderror
-
-
-    <div class="preview">
-      
-      @if (Storage::disk('public')->exists($product->image))
-        <img id="preview-image" src="{{Storage::url($product->image)}}" 
-        alt="preview image" style="max-height: 120px">
-      @else
-        <img id="preview-image" src="{{$product->image}}" 
-        alt="preview image" style="max-height: 120px">
-      @endif
-    </div>
-
-    <div class="form-row">
-      <div class="form-input">
-        <label for="desc" >Description</label>
-        <input type="text" name="description" id="desc" value=" {{old('description', $product->description) }}">
-          @error('description')
+        @error('image')
           <p class="text-danger">
           {{$message}}
           </p>   
         @enderror
+        <div class="update-image">
+          <label class="form-label" for="">Old Image File</label>
+          <input class="form-control" type="text" value="{{$product->image}}" readonly>
+        
+  
+        </div>
+        <div class="preview d-flex flex-column align-items-start">
+          <label class="form-label" for="">Preview</label>
+          @if (Storage::disk('public')->exists($product->image))
+            <img id="preview-image" src="{{Storage::url($product->image)}}" 
+            alt="preview image" style="max-height: 120px">
+          @else
+            <img id="preview-image" src="{{$product->image}}" 
+            alt="preview image" style="max-height: 120px">
+          @endif
+        </div>
       </div>
     </div>
+  </div>
+
+
+
+
+ 
+
 
   <button type="submit" class="btn btn-primary">Update Item</button>
 </form>
@@ -150,5 +157,5 @@
 
 @endif
 
-
+</div>
 @endsection

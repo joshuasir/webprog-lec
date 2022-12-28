@@ -99,9 +99,9 @@
 </div>
 
 
-<div class="checkout-form p-3" style="width: 20em;">
+<div class="checkout-form p-4" style="width: 22em;">
     <form action="/checkout" method="post">
-      <h3>Send To...</h3>
+      <h3>Credentials</h3>
       @csrf
       <input type="hidden" name="cart_id" value="{{$cartitems->id}}">
       <div class="form-group">
@@ -120,11 +120,12 @@
       @endif
   </form>
   @else
-  <div class="trash d-flex justify-content-center">
+  <div class="d-flex flex-column align-items-center justify-content-center">
     <!-- <img src="https://img.freepik.com/premium-vector/sketched-empty-trash-bin-desktop-icon-trash-can-vector-sketch-illustration_231873-3361.jpg?w=2000" alt=""> -->
-  
-  <h1 class="text-center pb-5 mt-5 pt-5">cart is empty! Let’s go shopping</h1>
-  </div>
+    <h1 class="text-center pt-5 mt-5">Cart is empty</h1>
+    <h1 class="text-center pb-5">Let’s go <a href="/food" class="text-decoration-none" >shopping</a>!</h1>
+    
+ </div>
   @endif
   </div>
 </div>

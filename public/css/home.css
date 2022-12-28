@@ -9,7 +9,7 @@
     background-image: url('/../images/henry-be-5PRQsEGkE10-unsplash.jpg');
     background-size: cover;
     background-position: center bottom;
-    
+    background-attachment: fixed;
 }
 
 .banner h1 {
@@ -22,7 +22,59 @@
   margin-top: -1.5em;
   
 }
+a{
+  text-decoration: none;
+  
+}
 
+h2{
+  
+}
+.menu{
+  font-family: 'LemonMilk';
+  color: white;
+  transition: all 2s;
+  font-size: 6rem;
+}
+/* .column::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(37, 37, 37, 0.13);
+} */
+.column{
+  width:100%; 
+  height:32em; 
+  background-position:top; 
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position:center; 
+  overflow: hidden;
+  /* background-attachment: fixed; */
+}
+.join{
+  color: white; 
+  background-color:rgb(34, 34, 34); 
+  font-size:2.25rem; 
+  font-weight: 100;
+  font-family:'Coolvetica';
+  margin: 1em;
+
+}
+
+.join:hover{
+  color: rgb(34, 34, 34); 
+  background-color:white; 
+}
+.column:hover{
+  transform: scale(1.1);
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -56,26 +108,31 @@
   align-items: center;
   height: 10em;
   padding-top: 2em;
+  padding-bottom: 5em;
+  /* overflow: hidden; */
 }
 h3{
   font-family: 'Coolvetica';
   font-size: 5rem;
-  position: relative;
-  white-space: nowrap;
+
   
 }
-.favourite h3:after {
-  --deco-height: 0.3125em;
+.favourite-item:hover{
+  transform: scale(1.2);
+}
+.carousel-caption p{
+  font-size: 3rem;
+  font-family: 'Coolvetica';
+}
+.favourite-item::before {
   content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: calc(var(--deco-height) * -0.625);
-  height: var(--deco-height);
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-  background-size: auto 100%;
-  background-repeat: round;
-  background-position: 0em;
+  background-color: rgba(37, 37, 37, 0.13);
 }
 .center{
   position:absolute;
@@ -134,7 +191,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3em;
+    
 }
 
 .about h2 {
@@ -142,11 +199,17 @@ h3{
     color: #0aa1dd;
 }
 
-.about h5 {
+.about p {
     margin-top: 1em;
     font-size: 2rem;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Coolvetica';
     max-width: 45em;
-    text-align: cemter;
+    text-align: center;
+    color: rgba(43, 43, 43, 0.76);
+    /* font-weight: 100; */
 }
-
+h1{
+  font-family: 'Coolvetica';
+  font-size: 4.5rem;
+  font-weight: 400;
+}

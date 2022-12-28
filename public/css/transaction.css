@@ -2,7 +2,9 @@
     top: 0;
     background-color: #201e1e;
 }
-
+.container{
+    height: 50em;
+}
 h1{
     font-family: 'Coolvetica'
 }

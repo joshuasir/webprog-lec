@@ -6,9 +6,9 @@
 @endsection
 @section('content')
     <div style="margin-top: 8em;" class="container mb-5" >
-        <h1>Transaction History</h1>
+        
         @if($histories!=null && count($histories)>0)
-
+        <h1>Transaction History</h1>
     <div class="accordion mt-4" id="accordion">
         @foreach($histories as $history)
         <div class="card">
@@ -83,7 +83,12 @@
         @endforeach
     </div>
     @else
-    <h3 class="text-center mt-5">No transaction yet.</h3>
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <!-- <img src="https://img.freepik.com/premium-vector/sketched-empty-trash-bin-desktop-icon-trash-can-vector-sketch-illustration_231873-3361.jpg?w=2000" alt=""> -->
+      
+      <h1 class="text-center pt-5 mt-5">No Transaction History yet</h1>
+      <h1 class="text-center pb-5">Let’s go <a href="/food" class="text-decoration-none" >shopping</a>!</h1>
+      </div>
     @endif
 </div>
 @endsection

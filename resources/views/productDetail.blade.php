@@ -43,7 +43,7 @@
   
     @if(Session::get('user') && Session::get('user')['role']==='admin')
     <a href="/updateItem/{{$product->id}}">
-      <div class="btn btn-warning btn-sm">Update Item</div>
+      <div class="btn btn-warning btn-lg">Update Item</div>
     </a>
     @endif
   
