@@ -8,7 +8,7 @@ The application has two role, customer and admin. The customer mainly uses the a
 
 The main feature of this app 
 ### Pick a Menu Item
-![image](https://github.com/joshuasir/webprog-lec/assets/71873035/decb9b92-32ca-4d19-9de3-6fe3911bd872)
+![image](https://github.com/joshuasir/webprog-lec/assets/71873035/7b1ce361-9a0b-4134-86dc-22f7db07986c)
 <img width="518" alt="image" src="https://github.com/joshuasir/webprog-lec/assets/71873035/872eb7f6-b650-40d6-9c00-307bce797b24">
 <img width="677" alt="image" src="https://github.com/joshuasir/webprog-lec/assets/71873035/4a85d3fb-1e12-4d48-9be2-a6a4a225022f">
 
