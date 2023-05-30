@@ -8,7 +8,7 @@ Resto is a Restaurant Web App built on the robust Laravel framework. This web ap
 
 The application has two role, customer and admin. The customer mainly uses the application for browsing menu, ordering food, and browse transaction history where the admin role expected to have permission in managing menu items but doesn't order. 
 
-The main feature of this app 
+The main features of this app 
 ### Pick a Menu Item
 ![image](https://github.com/joshuasir/webprog-lec/assets/71873035/7b1ce361-9a0b-4134-86dc-22f7db07986c)
 <img width="518" alt="image" src="https://github.com/joshuasir/webprog-lec/assets/71873035/872eb7f6-b650-40d6-9c00-307bce797b24">
