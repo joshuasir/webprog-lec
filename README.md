@@ -1,5 +1,5 @@
 # Resto Web App with Laravel Framework and SQL Database
------
+
 <img width="900" alt="image" src="https://github.com/joshuasir/webprog-lec/assets/71873035/890496fd-bf2e-466f-9f6f-878637349442">
 
 Resto is a Restaurant Web App built on the robust Laravel framework. This web application simplifies the process of food ordering, making it convenient and efficient for both customers and restaurant owners. The application follows a standard e-commerce context design.
